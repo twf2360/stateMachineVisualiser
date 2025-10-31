@@ -1,8 +1,10 @@
 # State Machine Graph Generator (JSON to DOT)
 
-This project provides a Go utility that takes a custom-formatted JSON file defining a state machine and converts it into a Graphviz DOT language file. It then executes the `dot` command (from Graphviz) to automatically generate a visual representation (e.g., a PNG or SVG image) of the state machine's navigational flow.
+State machines can now be used to represent UI journeys in mobile apps. However, it can not always be immediately obvious when looking at JSON definitions of these state machines what the UI journey will look like, and what states can transition to other states.
 
-## Prerequisites (For End Users)
+This project provides a Go utility that takes a JSON file defining a state machine and converts it into a Graphviz DOT language file. It then executes the `dot` command (from Graphviz) to generate a visual representation in PNG/SVG of the state machine's navigational flow.
+
+## Prerequisites
 
 
 ### 1. Graphviz (Mandatory)
