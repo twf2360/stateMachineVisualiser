@@ -1,0 +1,38 @@
+{
+    "id": "demoTest",
+    "initialState": "a",
+    "states": {
+        "a": {
+            "stateType": "screen",
+            "onEvent": {
+                "someEvent": [
+                    {
+                        "targetState": "b"
+                    }
+                ],
+                "someOtherEvent": [
+                    {
+                        "targetState": "c"
+                    }
+                ]
+            },
+            "someIgnoredContent": {}
+        },
+        "b": {
+            "stateType": "screen"
+        },
+        "c": {
+            "stateType": "screen",
+            "onEvent": {
+                "anEventTypeOfSomeKind": [
+                    {
+                        "targetState": "a"
+                    }
+                ]
+            }
+        },
+        "d" : {
+                "stateType": "someOtherStateType" 
+        }
+    }
+}
