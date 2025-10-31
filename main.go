@@ -102,7 +102,6 @@ func main() {
 
 	dotSource := generateDOT(sm)
 
-	// 4. Execute Graphviz 'dot' command
 
 	dotFilePath := filepath.Join(os.TempDir(), "temp_nav_graph.dot")
 	if err := ioutil.WriteFile(dotFilePath, []byte(dotSource), 0644); err != nil {
@@ -117,7 +116,7 @@ func main() {
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		fmt.Printf("\nGraphviz execution failed! (Is the 'dot' command installed?)\n")
+		fmt.Printf("Graphviz execution failed! (Is the 'dot' command installed?)\n")
 		fmt.Printf("Error: %v\n", err)
 		fmt.Printf("Graphviz Output:\n%s\n", string(output))
 		os.Exit(1)
